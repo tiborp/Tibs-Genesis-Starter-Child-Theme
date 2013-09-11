@@ -10,4 +10,4 @@ Thanks to Bill Erickson and Matt Banks for showing me the way.
 
 [https://github.com/mattbanks](https://github.com/mattbanks)
 
-Note that you'll need to have the [http://studiopress.com](Genesis Theme Framework) installed to use this theme.
+Note that you'll need to have the [Genesis Theme Framework](http://studiopress.com) installed to use this theme.
