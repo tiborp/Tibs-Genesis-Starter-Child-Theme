@@ -4,10 +4,10 @@ This is my version of a Genesis Starter Child Theme. It uses a theme setup funct
 
 Consider it a work in progress; feel free to fork, edit, comment etc.
 
-Thanks to Bill Erickson and Matt Banks for showing me the way.
+Thanks to [Bill Erickson](https://github.com/billerickson) and [Matt Banks](https://github.com/mattbanks) for showing me the way.
 
 [https://github.com/billerickson](https://github.com/billerickson)
 
-[https://github.com/mattbanks](https://github.com/mattbanks)
+(https://github.com/mattbanks)
 
 Note that you'll need to have the [Genesis Theme Framework](http://studiopress.com) installed to use this theme.
