@@ -6,8 +6,4 @@ Consider it a work in progress; feel free to fork, edit, comment etc.
 
 Thanks to [Bill Erickson](https://github.com/billerickson) and [Matt Banks](https://github.com/mattbanks) for showing me the way.
 
-[https://github.com/billerickson](https://github.com/billerickson)
-
-(https://github.com/mattbanks)
-
 Note that you'll need to have the [Genesis Theme Framework](http://studiopress.com) installed to use this theme.
