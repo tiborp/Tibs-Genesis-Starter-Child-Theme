@@ -9,3 +9,5 @@ Thanks to Bill Erickson and Matt Banks for showing me the way.
 [https://github.com/billerickson](https://github.com/billerickson)
 
 [https://github.com/mattbanks](https://github.com/mattbanks)
+
+Note that you'll need to have the [http://studiopress.com](Genesis Theme Framework) installed to use this theme.
