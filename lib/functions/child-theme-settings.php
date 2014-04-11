@@ -138,8 +138,8 @@ class Child_Theme_Settings extends Genesis_Admin_Boxes {
  *
  * @since 1.0.0
  */
-function be_add_child_theme_settings() {
+function tibs_add_child_theme_settings() {
 	global $_child_theme_settings;
 	$_child_theme_settings = new Child_Theme_Settings;
 }
-add_action( 'genesis_admin_menu', 'be_add_child_theme_settings' );
+add_action( 'genesis_admin_menu', 'tibs_add_child_theme_settings' );
