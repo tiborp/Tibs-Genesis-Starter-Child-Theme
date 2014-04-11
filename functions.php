@@ -117,11 +117,28 @@ function tibs_theme_setup() {
 	// Add viewport meta tag for mobile browsers
 	add_theme_support( 'genesis-responsive-viewport' );
 
-	// Enqueue Lato Google font
+
+  // remove the default stylesheet
+  remove_action( 'genesis_meta', 'genesis_load_stylesheet' );
+
+  // add the new stylesheets
+  add_action( 'genesis_meta', 'tibs_sass_styles' );
+
+	// Enqueue Custom Scipts
 	add_action( 'wp_enqueue_scripts', 'tibs_load_custom_scripts' );
 
 	// Add support for custom background
 	add_theme_support( 'custom-background' );
+
+  // Add support for structural wraps
+	add_theme_support( 'genesis-structural-wraps', array(
+		'header',
+		'nav',
+		'subnav',
+		'inner',
+		'footer-widgets',
+		'footer'
+	) );
 
 	// Add support for 3-column footer widgets
 	add_theme_support( 'genesis-footer-widgets', 3 );
@@ -249,7 +266,14 @@ function tibs_dont_update_theme( $r, $url ) {
  */
 function tibs_load_custom_scripts() {
   wp_enqueue_script( 'responsive-menu', CHILD_LIB . '/js/responsive-menu.js', array( 'jquery' ), CHILD_THEME_VERSION );
-  wp_enqueue_style( 'google-font-lato', '//fonts.googleapis.com/css?family=Lato:300,700', array(), CHILD_THEME_VERSION );
+}
+
+function tibs_sass_styles() {
+  echo '<link rel="stylesheet" type="text/css" href="'. CHILD_URL . '/css/style.css">';
+  // echo '<link rel="stylesheet" type="text/css" href="'. CHILD_URL . '/library/css/style.css" media="(min-width:600px)">';
+  // echo '<!--[if (lt IE 9) & (!IEMobile)]>';
+  // echo '<link rel="stylesheet" h  ref="'. CHILD_URL . '/library/css/ie.css">';
+  // echo '<![endif]-->';
 }
 
 /**

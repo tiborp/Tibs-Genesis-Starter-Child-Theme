@@ -1,2 +1,4 @@
 *.sublime-*
 .phptidy-cache
+
+/.sass-cache/
