@@ -140,7 +140,7 @@ function tibs_theme_setup() {
 	) );
 
 	// Add support for 3-column footer widgets
-	add_theme_support( 'genesis-footer-widgets', 3 );
+	add_theme_support( 'genesis-footer-widgets', 4 );
 
 	// Add HTML5 markup structure
 	add_theme_support( 'html5' );
