@@ -8,8 +8,7 @@ add_action( 'genesis_setup', 'tibs_theme_setup', 15 );
  * Theme Setup
  *
  * This setup function attaches all of the site-wide functions
- * to the correct hooks and filters. All the functions themselves
- * are defined below this setup function.
+ * to the correct hooks and filters.
  *
  * @author Tibor Paulsch
  *
@@ -23,8 +22,8 @@ function tibs_theme_setup() {
 	remove_action( 'genesis_meta', 'genesis_load_stylesheet' );
 
 	// add the new sass generated stylesheet
-	add_action( 'genesis_meta', 'tibs_sass_styles' );
-	function tibs_sass_styles() {
+	add_action( 'genesis_meta', 'tibs_load_child_stylesheet' );
+	function tibs_load_child_stylesheet() {
 		wp_enqueue_style( 'child-theme', CHILD_CSS . '/style.css' );
 	}
 
