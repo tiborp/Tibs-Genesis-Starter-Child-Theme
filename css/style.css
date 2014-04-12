@@ -49,7 +49,6 @@
 /*
 01 Import Fonts
 ---------------------------------------------------------------------------------------------------- */
-@import url(//fonts.googleapis.com/css?family=Arimo|Varela);
 /*
 02 Base Styles
 ---------------------------------------------------------------------------------------------------- */
@@ -352,7 +351,7 @@ h6,
   line-height: 1.2;
   margin-bottom: 16px;
   margin-bottom: 1.6rem;
-  font-family: Arimo, Varela, sans-serif;
+  font-family: Open Sans, sans-serif;
   font-weight: 700; }
 
 /* line 19, ../sass/_03headings.scss */
@@ -444,7 +443,7 @@ h6,
   margin: 4rem 0 0.8rem;
   font-size: 48px;
   font-size: 4.8rem;
-  font-family: Arimo, Varela, sans-serif;
+  font-family: Open Sans, sans-serif;
   font-weight: 700; }
   /* line 11, ../sass/_04header.scss */
   .site-title a {

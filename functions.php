@@ -272,7 +272,7 @@ function tibs_load_custom_scripts() {
  * Enqueue Sass stylesheet
  */
 function tibs_sass_styles() {
-  echo '<link rel="stylesheet" type="text/css" href="'. CHILD_URL . '/css/style.css">';
+  echo '<link rel="stylesheet" id="child-theme-css" type="text/css" href="'. CHILD_URL . '/css/style.css" media="all">'."\n";
 }
 
 /**
