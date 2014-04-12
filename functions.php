@@ -49,6 +49,50 @@ function tibs_theme_setup() {
 		unset( $wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary'] );
 	}
 
+	/** Define Genesis Options */
+	add_filter('genesis_options', 'define_genesis_setting_custom', 10, 2);
+	function define_genesis_setting_custom($options, $setting) {
+	    if($setting == GENESIS_SETTINGS_FIELD) {
+	        $options['show_info'] = 0; // Display theme info in document source
+	        $options['update'] = 1; // Enable Automatic Updates
+	        $options['update_email'] = 0; // Notify when updates are available
+	        $options['update_email_address'] = ''; // Update email address
+	        $options['feed_uri'] = ''; // Custom reed URI
+	        $options['redirect_feed'] = 0; // Redirect reed
+	        $options['comments_feed_uri'] = ''; // Custom comments feed URI
+	        $options['redirect_comments_feed'] = 0; // Redirect feed
+	        $options['site_layout'] = 'content-sidebar'; // Default layout
+	        $options['blog_title'] = 'text'; // Blog title/logo - 'text' or 'image'
+	        $options['nav'] = 1; // Include primary navigation
+	        $options['nav_superfish'] = 1; // Enable fancy dropdowns
+	        $options['nav_extras_enable'] = 0; // Enable extras
+	        $options['nav_extras'] = ''; // Extras - 'date', 'rss', 'search', 'twitter'
+	        $options['nav_extras_twitter_id'] = ''; // Twitter ID
+	        $options['nav_extras_twitter_text'] = 'Follow me on Twitter'; // Twitter link text
+	        $options['subnav'] = 0; // Include secondary navigation
+	        $options['subnav_superfish'] = 1; // Enable fancy dropdowns
+	        $options['breadcrumb_home'] = 0; // Enable breadcrumbs on Front Page
+	        $options['breadcrumb_single'] = 0; // Enable breadcrumbs on Posts
+	        $options['breadcrumb_page'] = 0; // Enable breadcrumbs on Pages
+	        $options['breadcrumb_archive'] = 0; // Enable breadcrumbs on Archives
+	        $options['breadcrumb_404'] = 0; // Enable breadcrumbs on 404 Page
+	        $options['breadcrumb_attachment'] = 0; // Enable breadcrumbs on Attachment Pages
+	        $options['comments_posts'] = 0; // Enable comments on Posts
+	        $options['comments_pages'] = 0; // Enable comments on Pages
+	        $options['trackbacks_posts'] = 0; // Enable trackbacks on Posts
+	        $options['trackbacks_pages'] = 0; // Enable trackbacks on Pages
+	        $options['content_archive'] = 'full'; // Content archives display - 'full', 'excerpts'
+	        $options['content_archive_limit'] = '240'; // Limit content to n characters
+	        $options['content_archive_thumbnail'] = 1; // Include featured image
+	        $options['posts_nav'] = 'numeric'; // Post navigation - 'older-newer', 'prev-next', 'numeric'
+	        $options['blog_cat'] = '0'; // Blog page displays which category
+	        $options['blog_cat_exclude'] = ''; // Blog page excludes which category 
+	        $options['blog_cat_num'] = 5; // Number of posts to show
+	        $options['header_scripts'] = ''; // Header scripts
+	        $options['footer_scripts'] = ''; // Footer scripts
+	        }
+	    return $options;
+	}
 
 	add_action( 'genesis_theme_settings_metaboxes', 'tibs_remove_genesis_metaboxes' );
 	/**
