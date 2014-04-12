@@ -11,56 +11,8 @@
  *
  */
 
- /** Exit if accessed directly */
-if ( ! defined( 'ABSPATH' ) ) exit( 'Cheatin&#8217; uh?' );
-
-add_action( 'genesis_init', 'tibs_constants', 15 );
-/**
- * This function defines the Genesis Child theme constants
- *
- * Data Constants: CHILD_SETTINGS_FIELD, CHILD_DOMAIN, CHILD_THEME_VERSION
- * CHILD_THEME_NAME, CHILD_THEME_URL, CHILD_DEVELOPER, CHILD_DEVELOPER_URL
- * Directories: CHILD_LIB_DIR, CHILD_IMAGES_DIR, CHILD_ADMIN_DIR, CHILD_JS_DIR, CHILD_CSS_DIR
- * URLs: CHILD_LIB, CHILD_IMAGES, CHILD_ADMIN, CHILD_JS, CHILD_CSS
- *
- * @since 1.1.0
- */
-function tibs_constants() {
-	$theme = wp_get_theme();
-
-	// Child theme (Change but do not remove)
-  /** @type constant Text Domain. */
-		define( 'CHILD_DOMAIN', $theme->get('TextDomain') );
-
-		/** @type constant Child Theme Version. */
-		define( 'CHILD_THEME_VERSION', $theme->Version );
-
-		/** @type constant Child Theme Name, used in footer. */
-		define( 'CHILD_THEME_NAME', $theme->Name );
-
-		/** @type constant Child Theme URL, used in footer. */
-		define( 'CHILD_THEME_URL', $theme->get('ThemeURI') );
-
-	// Developer Information, see lib/admin/admin-functions.php
-		/** @type constant Child Theme Developer, used in footer. */
-		define( 'CHILD_DEVELOPER', $theme->Author );
-
-		/** @type constant Child Theme Developer URL, used in footer. */
-		define( 'CHILD_DEVELOPER_URL', $theme->{'Author URI'}  );
-
-	// Define Directory Location Constants
-		/** @type constant Child Theme Library/Includes URL Location. */
-		define( 'CHILD_LIB_DIR',    CHILD_DIR . '/lib' );
-
-		/** @type constant Child Theme JS URL Location. */
-		define( 'CHILD_JS_DIR',     CHILD_DIR .'/lib/js' );
-
-	// Define URL Location Constants
-		/** @type constant Child Theme Library/Includes URL Location. */
-		define( 'CHILD_LIB',    CHILD_URL . '/lib' );
-}
-
-
+// Initialize Child Theme ** DON'T REMOVE **
+require_once( get_stylesheet_directory() . '/lib/functions/init.php');
 
 add_action( 'genesis_setup', 'tibs_theme_setup', 15 );
 function tibs_theme_setup() {
@@ -95,10 +47,6 @@ function tibs_theme_setup() {
 
 	// Unregister Genesis widgets
 	add_action( 'widgets_init', 'tibs_unregister_genesis_widgets', 20 );
-
-	// Setup Theme Settings & load Custom functions
-	require_once( CHILD_DIR . '/lib/functions/child-theme-settings.php' );
-  require_once( CHILD_DIR . '/lib/functions/child-theme-functions.php' );
 
 
 	// Don't update theme
@@ -264,15 +212,15 @@ function tibs_dont_update_theme( $r, $url ) {
  * Enqueue Scripts
  */
 function tibs_load_custom_scripts() {
-  wp_enqueue_script( 'responsive-menu', CHILD_LIB . '/js/responsive-menu.js', array( 'jquery' ), CHILD_THEME_VERSION );
+  wp_enqueue_script( 'responsive-menu', CHILD_JS. '/responsive-menu.js', array( 'jquery' ), CHILD_THEME_VERSION );
 }
 
 
 /**
- * Enqueue Sass stylesheet
+ * Enqueue Child Theme stylesheet
  */
 function tibs_sass_styles() {
-  echo '<link rel="stylesheet" id="child-theme-css" type="text/css" href="'. CHILD_URL . '/css/style.css" media="all">'."\n";
+	wp_enqueue_style( 'child-theme', CHILD_CSS . '/style.css' );
 }
 
 /**
