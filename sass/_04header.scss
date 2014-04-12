@@ -1,8 +1,12 @@
 .site-header {
-
+	background: $light;
 	min-height: 120px;
 	overflow: hidden;
-	@include rem(padding-bottom, 32px);
+	@include rem(padding-bottom, 30px);
+
+	.widget-area {
+		@include rem(padding, 20px 0 10px);
+	}
 }
 
 .site-title {

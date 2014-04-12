@@ -92,7 +92,7 @@ html {
 
 /* line 43, ../sass/_01defaults.scss */
 body {
-  background-color: #e5ebe6;
+  background-color: #e5e5e5;
   font-size: 16px;
   font-size: 1.6rem;
   line-height: 1.8;
@@ -435,12 +435,17 @@ h6,
 ---------------------------------------------------------------------------------------------------- */
 /* line 1, ../sass/_04header.scss */
 .site-header {
+  background: white;
   min-height: 120px;
   overflow: hidden;
-  padding-bottom: 32px;
-  padding-bottom: 3.2rem; }
+  padding-bottom: 30px;
+  padding-bottom: 3rem; }
+  /* line 7, ../sass/_04header.scss */
+  .site-header .widget-area {
+    padding: 20px 0 10px;
+    padding: 2rem 0 1rem; }
 
-/* line 8, ../sass/_04header.scss */
+/* line 12, ../sass/_04header.scss */
 .site-title {
   margin: 40px 0 8px;
   margin: 4rem 0 0.8rem;
@@ -448,29 +453,29 @@ h6,
   font-size: 4.8rem;
   font-family: Open Sans, sans-serif;
   font-weight: 700; }
-  /* line 11, ../sass/_04header.scss */
+  /* line 15, ../sass/_04header.scss */
   .site-title a {
     color: #3b3d42; }
-    /* line 13, ../sass/_04header.scss */
+    /* line 17, ../sass/_04header.scss */
     .site-title a:hover {
       color: #3e6b85; }
 
-/* line 21, ../sass/_04header.scss */
+/* line 25, ../sass/_04header.scss */
 .header-image .site-title {
   margin: 0; }
 
-/* line 25, ../sass/_04header.scss */
+/* line 29, ../sass/_04header.scss */
 .site-description {
   line-height: 1.25;
   color: #3b3d42; }
 
-/* line 31, ../sass/_04header.scss */
+/* line 35, ../sass/_04header.scss */
 .header-full-width .site-title,
 .header-full-width .site-title a,
 .header-full-width .title-area {
   width: 100%; }
 
-/* line 37, ../sass/_04header.scss */
+/* line 41, ../sass/_04header.scss */
 .header-image .site-title,
 .header-image .site-title a,
 .header-image .title-area {
@@ -480,11 +485,11 @@ h6,
   overflow: hidden;
   width: 320px; }
 
-/* line 47, ../sass/_04header.scss */
+/* line 51, ../sass/_04header.scss */
 .header-image .site-description {
   display: none; }
 
-/* line 51, ../sass/_04header.scss */
+/* line 55, ../sass/_04header.scss */
 .site-header .search-form {
   float: right;
   margin-top: 56px;
@@ -1136,11 +1141,11 @@ img.alignnone {
 
 /* line 48, ../sass/_12images-captions.scss */
 .img-circle {
-  -webkit-border-radius: 500px;
   -moz-border-radius: 500px;
+  -webkit-border-radius: 500px;
   border-radius: 500px; }
 
-/* line 54, ../sass/_12images-captions.scss */
+/* line 52, ../sass/_12images-captions.scss */
 img.alignleft,
 .post-image,
 .wp-caption.alignleft {
@@ -1148,20 +1153,20 @@ img.alignleft,
   margin: 0 24px 24px 0;
   margin: 0 2.4rem 2.4rem 0; }
 
-/* line 61, ../sass/_12images-captions.scss */
+/* line 59, ../sass/_12images-captions.scss */
 img.alignright,
 .wp-caption.alignright {
   display: inline;
   margin: 0 0 24px 24px;
   margin: 0 0 2.4rem 2.4rem; }
 
-/* line 67, ../sass/_12images-captions.scss */
+/* line 65, ../sass/_12images-captions.scss */
 p.wp-caption-text {
   line-height: 1.2;
   margin: 10px 0 20px 0;
   margin: 1rem 0 2rem 0; }
 
-/* line 72, ../sass/_12images-captions.scss */
+/* line 70, ../sass/_12images-captions.scss */
 .wp-caption {
   padding-top: 5px;
   padding-top: 0.5rem;
