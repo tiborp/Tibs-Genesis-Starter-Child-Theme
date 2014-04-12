@@ -146,7 +146,7 @@ function tibs_theme_setup() {
 		'footer'
 	) );
 
-	// Add support for *-column footer widgets, up until six
+	// Add support for *-column footer widgets (max 6)
 	add_theme_support( 'genesis-footer-widgets', 4 );
 
 	// Add HTML5 markup structure
