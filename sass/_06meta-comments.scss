@@ -5,7 +5,7 @@
 		clear: both;
 		line-height: 1.5;
 		color: shade($light,70%);
-		/*@include rem(font-size, 14px)*/
+		@include rem(font-size, 14px);
 	}
 
 	.entry-header .entry-meta {

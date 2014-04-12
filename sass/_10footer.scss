@@ -7,14 +7,21 @@ Site Footer
 }
 
 .site-footer .wrap {
-	border-top: 2px solid tint($dark,30%);
 	overflow: hidden;
 	@include rem(padding, 48px 0);
 }
 
-.site-footer p {
+.site-footer {
 	@include rem(font-size, 16px);
 	text-align:center;
+
+	.footer-left {
+		text-align: left;
+	}
+
+	.footer-right {
+		text-align: right;
+	}
 }
 
 /* Footer Widgets */

@@ -118,3 +118,10 @@ $rem-with-px-fallback: true !default;
 	// Use rem values for everyone else (overrides pixel values).
 	#{$property}: $rem-values;
 }
+
+// Border radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}

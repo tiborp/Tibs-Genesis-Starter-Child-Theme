@@ -135,6 +135,14 @@
 		display: none;
 	}
 
+	.site-inner .wrap {
+		padding: 0;
+	}
+
+	.footer-widgets .wrap {
+		@include rem(padding, 0 40px);
+	}
+
 	.site-footer .wrap {
 		padding: 1.5rem 0;
 	}

@@ -33,6 +33,24 @@ img.alignnone {
 	@include rem(margin-bottom, 12px);
 }
 
+.img-rounded {
+  @include border-radius(6px);
+}
+.img-polaroid {
+  @include rem(padding, 4px 4px 20px);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.img-circle {
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  border-radius: 500px;
+}
+
 img.alignleft,
 .post-image,
 .wp-caption.alignleft {
@@ -48,11 +66,18 @@ img.alignright,
 
 p.wp-caption-text {
 	line-height: 1.2;
-	@include rem(margin-top, 12px);
+	@include rem(margin, 10px 0 20px 0);
 }
 
 .wp-caption {
+	@include rem(padding-top, 5px);
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0, 0, 0, 0.2);
 	text-align:center;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .gallery-caption {
