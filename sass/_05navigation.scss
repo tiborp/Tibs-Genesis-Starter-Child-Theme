@@ -14,13 +14,13 @@
 
 	a {
 		border: none;
-		color: $light;
+		color: $color-base;
 		display: block;
 		@include rem(padding, 20px 24px);
 		position: relative;
 
 		&:hover {
-			color: $dark;
+			color: $light;
 		}
 	}
 
@@ -107,12 +107,12 @@
 --------------------------------------------- */
 
 .nav-primary {
-	background-color: $color-extra;
+	background-color: $dark;
 }
 
 .nav-primary a:hover,
 .nav-primary .current-menu-item > a {
-	color: #fff;
+	color: $light;
 }
 
 .nav-primary .sub-menu a {
@@ -123,7 +123,8 @@
 	background-color:$color-extra;
 
 	&:hover {
-		color: $light;
+		background-color: $color-base;
+		color: $color-extra;
 	}
 }
 

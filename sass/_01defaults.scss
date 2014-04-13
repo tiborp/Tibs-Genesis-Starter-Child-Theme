@@ -45,6 +45,7 @@
     @include rem(font-size, 16px);
     line-height: 1.8;
     font-family: $baseFontFamily;
+    font-weight: 300;
     color: $textColor;
   }
 
@@ -93,5 +94,13 @@
 
   a img {
     border: none;
+  }
+
+  pre {
+    background-color: lighten( $color-base, 5%);
+    border: 1px solid darken($color-base, 5%);
+    overflow: auto;
+    @include rem(padding, 30px);
+    @include border-radius(3px)
   }
 
