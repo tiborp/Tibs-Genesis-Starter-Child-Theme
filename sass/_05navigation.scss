@@ -5,6 +5,7 @@
 	letter-spacing: 1px;
 	letter-spacing: 0.1rem;
 	line-height: 1.5;
+	text-transform: uppercase;
 	width: 100%;
 
 	.menu-item {
@@ -112,6 +113,7 @@
 
 .nav-primary a:hover,
 .nav-primary .current-menu-item > a {
+	background-color: darken($color-base, 75%);
 	color: $light;
 }
 
