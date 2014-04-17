@@ -18,7 +18,12 @@ function tibs_theme_setup() {
 	// Add viewport meta tag for mobile browsers
 	add_theme_support( 'genesis-responsive-viewport' );
 
-	// remove the default stylesheet
+	add_action( 'wp_enqueue_scripts', 'tibs_load_dashicons' );
+	function tibs_load_dashicons() {
+    	wp_enqueue_style( 'dashicons' );
+	}
+
+	// remove the default stylesheet which is just there for WP to recognize the theme
 	remove_action( 'genesis_meta', 'genesis_load_stylesheet' );
 
 	// Add support for Dashicons
@@ -118,10 +123,8 @@ function tibs_theme_setup() {
 		remove_meta_box( 'genesis-theme-settings-scripts',    $_genesis_theme_settings_pagehook, 'main' );
 	}
 
+	// Remove default link for images in image editor
 	add_action( 'admin_init', 'tibs_imagelink_setup', 10 );
-	/**
-	 * Remove default link for images in image editor
-	 */
 	function tibs_imagelink_setup() {
 		$image_set = get_option( 'image_default_link_type' );
 		if ( $image_set !== 'none' ) {
@@ -164,7 +167,8 @@ function tibs_theme_setup() {
 	// Sidebars
 	unregister_sidebar( 'sidebar-alt' );
 
-	// Unregister Genesis widgets
+	// Remove Genesis Widgets
+	add_action( 'widgets_init', 'tibs_unregister_genesis_widgets', 20 );
 	function tibs_unregister_genesis_widgets() {
 		unregister_widget( 'Genesis_eNews_Updates' );
 		unregister_widget( 'Genesis_Featured_Page' );
