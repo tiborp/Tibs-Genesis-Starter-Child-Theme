@@ -21,6 +21,12 @@ function tibs_theme_setup() {
 	// remove the default stylesheet
 	remove_action( 'genesis_meta', 'genesis_load_stylesheet' );
 
+	// Add support for Dashicons
+	add_action( 'wp_enqueue_scripts', 'tibs_load_dashicons' );
+	function tibs_load_dashicons() {
+    	wp_enqueue_style( 'dashicons' );
+	}
+
 	// add the new sass generated stylesheet
 	add_action( 'genesis_meta', 'tibs_load_child_stylesheet' );
 	function tibs_load_child_stylesheet() {
