@@ -1,0 +1,54 @@
+/* Wraps */
+
+	.site-container {
+	  width: 100%;
+
+	}
+
+	.site-inner {
+		@include clearfix;
+		@include rem(padding-top, 40px);
+		@include rem(margin-bottom, 40px);
+
+		.wrap {
+			
+		}
+	}
+
+	
+
+/* Containers and Columns */
+
+
+
+
+	.archive-page {
+		margin-left:0;
+	}
+
+
+
+/* Entry Content Structure */
+
+	.content {
+		background-color: $light;
+		@include rem(padding, 40px);
+	}
+
+	.entry,
+	.page .post.entry {
+		@include rem(margin-bottom, 80px);
+	}
+
+	.single .entry {
+		@include rem(margin-bottom, 48px);
+	}
+
+	.page .entry {
+		margin: 0;
+	}
+
+	.entry-content {
+		overflow: hidden;
+	}
+

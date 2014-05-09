@@ -184,16 +184,6 @@ function tibs_theme_setup() {
 	// Add support for custom background
 	add_theme_support( 'custom-background' );
 
-  // Add support for structural wraps
-	add_theme_support( 'genesis-structural-wraps', array(
-		'header',
-		'nav',
-		'subnav',
-		'inner',
-		'footer-widgets',
-		'footer'
-	) );
-
 	// Add support for *-column footer widgets (max 6)
 	add_theme_support( 'genesis-footer-widgets', 4 );
 
@@ -204,8 +194,8 @@ function tibs_theme_setup() {
 	remove_action( 'genesis_footer', 'genesis_do_footer' );
 	add_action( 'genesis_footer', 'tibs_custom_footer_text' );
 	function tibs_custom_footer_text() {
-		echo '<div class="one-half first footer-left">' . wpautop( genesis_get_option( 'footer-left', 'child-settings' ) ) . '</div>';
-		echo '<div class="one-half footer-right">' . wpautop( genesis_get_option( 'footer-right', 'child-settings' ) ) . '</div>';
+		echo '<div class="container">' . wpautop( genesis_get_option( 'footer-left', 'child-settings' ) ) . '</div>';
+		
 	}
 
 }

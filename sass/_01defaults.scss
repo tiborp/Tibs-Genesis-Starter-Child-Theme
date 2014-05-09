@@ -47,6 +47,7 @@
     font-family: $baseFontFamily;
     font-weight: 300;
     color: $textColor;
+    padding-top: 80px;
   }
 
   p.pages,
@@ -103,4 +104,3 @@
     @include rem(padding, 30px);
     @include border-radius;
   }
-

@@ -42,36 +42,16 @@
 14 Media Queries
 ---------------------------------------------------------------------------------------------------- */
 
-/* Desktops, laptops and iPads (landscape) ----------- */
-
-@media only screen and (max-width: 1024px) {
-
-	.wrap {
-		padding: 0 10px;
-	}
-
-}
 
 /* iPads (portrait) ----------- */
 
 @media only screen and (max-width: 768px) {
 
-	.wrap {
-		padding: 0 2%;
-	}
 
 	.archive-page,
 	.footer-widgets .widget-area,
-	.wrap,
-	.site-footer .creds,
-	.site-footer .gototop,
-	.site-header .widget-area,
 	.site-inner,
 	.title-area,
-	.site-container .sidebar,
-	.site-container .content,
-	.site-container .content-sidebar-wrap,
-	.site-container .sidebar-secondary,
 	.header-image .site-title,
 	.header-image .title-area,
 	.genesis-nav-menu.menu-mobile .sub-menu .sub-menu,
@@ -135,32 +115,8 @@
 		display: none;
 	}
 
-	.site-inner .wrap {
-		padding: 0;
-	}
-
-	.footer-widgets .wrap {
-		@include rem(padding, 0 40px);
-	}
-
-	.site-footer .wrap {
-		padding: 1.5rem 0;
-	}
-
 	.site-footer-widgets .widget-area {
 		margin: 0;
-	}
-
-	.site-footer .footer-left,
-	.site-footer .footer-right {
-		text-align: center;
-		width: 100%;
-		float: none;
-		padding: 0 0 .75rem;
-	}
-
-	.gototop {
-		float: none;
 	}
 
 	.nav-primary,
@@ -170,11 +126,6 @@
 
 	.mobile-nav {
 		display: block;
-	}
-
-
-	.site-footer .one-half {
-		margin-left: 0;
 	}
 
 	/* Align everything center */
