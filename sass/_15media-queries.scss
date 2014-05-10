@@ -3,7 +3,7 @@
 ---------------------------------------------------------------------------------------------------- */
 .mobile-nav {
 	display:none;
-	background-color:#3b3d42;
+	background-color:#000;
 }
 
 .toggle-switch span {
@@ -35,18 +35,26 @@
 .secondary .toggle-switch {
   /*background: -webkit-linear-gradient(#4d4c4c 0%, #ffffff 100%);*/
   /*background: -webkit-linear-gradient(rgba(22,22,22,1) 0%, rgba(78,78,78,1) 100%)*/
-  background-color:#3b3d42;
+  background-color:#000;
 }
 
 /*
 14 Media Queries
 ---------------------------------------------------------------------------------------------------- */
+@media only screen and (min-width: 768px) {
 
+	body {
+		padding-top: 4rem;
+	}
+}
 
 /* iPads (portrait) ----------- */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
 
+	.body {
+		padding-top: 40px;
+	}
 
 	.archive-page,
 	.footer-widgets .widget-area,
