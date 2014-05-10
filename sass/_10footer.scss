@@ -42,6 +42,7 @@ Site Footer
 		}
 
 		.widget {
+			padding: 4rem 0;
 			@include rem(margin-bottom, 24px);
 		}
 
@@ -51,23 +52,4 @@ Site Footer
 			word-wrap: break-word;
 		}
 
-	}
-
-	.footer-widgets .wrap > div {
-		display: table-cell;
-	}
-
-
-/* Footer Navigation */
-
-	.site-footer #footer-nav .wrap {
-	  border: none;
-	  padding: 0;
-	}
-	.site-footer ul.menu-footer {
-	  font-size: 13px;
-	  font-weight: normal;
-	}
-	.site-footer ul.menu-footer a {
-	  padding: 0rem .75rem;
 	}
