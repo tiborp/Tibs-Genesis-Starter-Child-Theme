@@ -134,7 +134,7 @@ function tibs_footer_widget_areas() {
 		$counter++;
 	}
 
-	echo apply_filters( 'genesis_footer_widget_areas', sprintf( '<div id="footer-widgets" class="footer-widgets tibs-footer-widgets-%4$s"><div class="container"><div class="row">%2$s%1$s%3$s</div></div></div>', $output, genesis_structural_wrap( 'footer-widgets', 'open', 0 ), genesis_structural_wrap( 'footer-widgets', 'close', 0 ), $footer_widgets ) );
+	echo apply_filters( 'genesis_footer_widget_areas', sprintf( '<div id="footer-widgets" class="footer-widgets tibs-footer-widgets-%4$s"><div class="container"><div class="row">%2$s%1$s%3$s</div></div></div>', $output, genesis_structural_wrap	( 'footer-widgets', 'open', 0 ), genesis_structural_wrap( 'footer-widgets', 'close', 0 ), $footer_widgets ) );
 
 }
 
@@ -232,8 +232,8 @@ function bsg_add_markup_class( $attr, $context ) {
             'site-inner'        		=> 'container',
             'site-footer'       		=> 'row',
             'content-sidebar-wrap'      => 'row',
-            'content'           		=> 'col-md-9',
-            'sidebar-primary'   		=> 'col-md-3',
+            'content'           		=> 'col-md-8',
+            'sidebar-primary'   		=> 'col-md-4',
             'archive-pagination'		=> 'clearfix',
         ),
         $context,
