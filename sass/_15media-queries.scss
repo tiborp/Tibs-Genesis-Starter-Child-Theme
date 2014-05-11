@@ -41,6 +41,19 @@
 /*
 14 Media Queries
 ---------------------------------------------------------------------------------------------------- */
+
+@media screen and (min-width: 1600px) {
+  .container {
+    width: 1370px;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .container {
+    width: 1600px;
+  }
+}
+
 @media only screen and (min-width: 768px) {
 
 	body {

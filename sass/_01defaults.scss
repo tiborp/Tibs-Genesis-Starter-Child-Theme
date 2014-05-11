@@ -41,7 +41,7 @@
 
   }
   body {
-    background-color: $color-base;
+    background-color: $light;
     @include rem(font-size, 16px);
     line-height: 1.6;
     font-family: $baseFontFamily;

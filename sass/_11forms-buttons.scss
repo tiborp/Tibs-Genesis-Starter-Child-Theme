@@ -5,7 +5,7 @@ textarea {
 	border: 1px solid #ddd;
 	border-radius: 3px;
 	box-shadow: 0 0 5px #ddd inset;
-	@include rem(padding, 16px);
+	@include rem(padding, 12px);
 	width: 100%;
 	color: shade($light,50%);
 }

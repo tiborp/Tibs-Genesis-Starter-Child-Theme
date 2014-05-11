@@ -19,11 +19,11 @@
 	.content div.gform_wrapper textarea,
 	.content div.gform_wrapper .ginput_complex label {
 		@include rem(font-size, 16px);
-		@include rem(padding, 16px);
+		@include rem(padding, 12px);
 	}
 
 	.content div.gform_wrapper input[type="submit"] {
-		@include rem(padding, 16px 24px);
+		@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 	}
 
 	.content div.gform_wrapper .ginput_complex label {

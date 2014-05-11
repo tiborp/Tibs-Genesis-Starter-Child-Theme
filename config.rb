@@ -5,8 +5,8 @@ require 'compass/import-once/activate'
 http_path = "/"
 css_dir = "css"
 sass_dir = "sass"
-images_dir = "images"
-javascripts_dir = "scripts"
+images_dir = "img"
+javascripts_dir = "lib/js"
 fonts_dir = "fonts"
 
 output_style = :nested
@@ -18,4 +18,9 @@ output_style = :nested
 # line_comments = false
 color_output = false
 
-preferred_syntax = :scss
+
+# If you prefer the indented syntax, you might want to regenerate this
+# project again passing --syntax sass, or you can uncomment this:
+# preferred_syntax = :sass
+# and then run:
+# sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass

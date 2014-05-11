@@ -243,7 +243,7 @@
 	.archive-pagination li a:hover,
 	.archive-pagination li.active a,
 	.archive-pagination li.disabled {
-		background-color: tint($dark, 30%);
+		background-color: $color-cta;
 		border-radius: 3px;
 		cursor: pointer;
 		@include rem(padding, 12px);
@@ -252,7 +252,7 @@
 
 	.archive-pagination li a:hover,
 	.archive-pagination li.active a {
-		background-color: $light;
+		background-color: tint($color-cta, 60%);
 		color:$dark;
 	}
 

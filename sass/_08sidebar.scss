@@ -2,6 +2,10 @@
 	display: inline;
 	line-height: 1.6;
 
+	.entry {
+		@include rem(margin-bottom, 32px)
+	}
+
 	h2.entry-title {
 		line-height: 0.6;
 	}
