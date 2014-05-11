@@ -225,7 +225,7 @@ function bsg_add_markup_class( $attr, $context ) {
     $classes_to_add = apply_filters ('bsg-classes-to-add', 
         // default bootstrap markup values
         array(
-            'site-header'       		=> 'container',
+            'site-header'       		=> 'fluid-container',
             //'nav-primary'       		=> 'row',
             'site-inner'        		=> 'container',
             'site-footer'       		=> 'row',

@@ -818,29 +818,29 @@ pre {
   overflow-y: scroll; }
 
 /* line 10, ../sass/bootstrap/_grid.scss */
-.container {
+.container, .site-header .wrap {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px; }
   /* line 20, ../sass/bootstrap/_mixins.scss */
-  .container:before, .container:after {
+  .container:before, .site-header .wrap:before, .container:after, .site-header .wrap:after {
     content: " ";
     display: table; }
   /* line 25, ../sass/bootstrap/_mixins.scss */
-  .container:after {
+  .container:after, .site-header .wrap:after {
     clear: both; }
   @media (min-width: 768px) {
     /* line 10, ../sass/bootstrap/_grid.scss */
-    .container {
+    .container, .site-header .wrap {
       width: 750px; } }
   @media (min-width: 992px) {
     /* line 10, ../sass/bootstrap/_grid.scss */
-    .container {
+    .container, .site-header .wrap {
       width: 970px; } }
   @media (min-width: 1200px) {
     /* line 10, ../sass/bootstrap/_grid.scss */
-    .container {
+    .container, .site-header .wrap {
       width: 1170px; } }
 
 /* line 30, ../sass/bootstrap/_grid.scss */
@@ -4169,16 +4169,18 @@ input[type="button"].btn-block {
         padding-right: 0; } }
 
 /* line 98, ../sass/bootstrap/_navbar.scss */
-.container > .navbar-header,
+.container > .navbar-header, .site-header .wrap > .navbar-header,
 .container > .navbar-collapse,
+.site-header .wrap > .navbar-collapse,
 .container-fluid > .navbar-header,
 .container-fluid > .navbar-collapse {
   margin-right: -15px;
   margin-left: -15px; }
   @media (min-width: 768px) {
     /* line 98, ../sass/bootstrap/_navbar.scss */
-    .container > .navbar-header,
+    .container > .navbar-header, .site-header .wrap > .navbar-header,
     .container > .navbar-collapse,
+    .site-header .wrap > .navbar-collapse,
     .container-fluid > .navbar-header,
     .container-fluid > .navbar-collapse {
       margin-right: 0;
@@ -4229,7 +4231,7 @@ input[type="button"].btn-block {
     text-decoration: none; }
   @media (min-width: 768px) {
     /* line 166, ../sass/bootstrap/_navbar.scss */
-    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    .navbar > .container .navbar-brand, .site-header .navbar > .wrap .navbar-brand, .navbar > .container-fluid .navbar-brand {
       margin-left: -15px; } }
 
 /* line 179, ../sass/bootstrap/_navbar.scss */
@@ -4650,10 +4652,10 @@ a.list-group-item.active > .badge,
     font-size: 21px;
     font-weight: 200; }
   /* line 22, ../sass/bootstrap/_jumbotron.scss */
-  .container .jumbotron {
+  .container .jumbotron, .site-header .wrap .jumbotron {
     border-radius: 6px; }
   /* line 26, ../sass/bootstrap/_jumbotron.scss */
-  .jumbotron .container {
+  .jumbotron .container, .jumbotron .site-header .wrap, .site-header .jumbotron .wrap {
     max-width: 100%; }
   @media screen and (min-width: 768px) {
     /* line 6, ../sass/bootstrap/_jumbotron.scss */
@@ -4661,7 +4663,7 @@ a.list-group-item.active > .badge,
       padding-top: 48px;
       padding-bottom: 48px; }
       /* line 34, ../sass/bootstrap/_jumbotron.scss */
-      .container .jumbotron {
+      .container .jumbotron, .site-header .wrap .jumbotron {
         padding-left: 60px;
         padding-right: 60px; }
       /* line 39, ../sass/bootstrap/_jumbotron.scss */
@@ -6199,7 +6201,7 @@ html {
 
 /* line 43, ../sass/_01defaults.scss */
 body {
-  background-color: white;
+  background-color: #f3f3f3;
   font-size: 16px;
   font-size: 1.6rem;
   line-height: 1.6;
@@ -6289,33 +6291,37 @@ pre {
     clear: both; }
 
 /* Containers and Columns */
-/* line 25, ../sass/_02layout.scss */
+/* line 22, ../sass/_02layout.scss */
+.site-header {
+  background-color: #fff; }
+
+/* line 30, ../sass/_02layout.scss */
 .archive-page {
   margin-left: 0; }
 
 /* Entry Content Structure */
-/* line 33, ../sass/_02layout.scss */
+/* line 38, ../sass/_02layout.scss */
 .content {
   background-color: white;
   padding: 40px;
   padding: 4rem; }
 
-/* line 38, ../sass/_02layout.scss */
+/* line 43, ../sass/_02layout.scss */
 .entry,
 .page .post.entry {
   margin-bottom: 80px;
   margin-bottom: 8rem; }
 
-/* line 43, ../sass/_02layout.scss */
+/* line 48, ../sass/_02layout.scss */
 .single .entry {
   margin-bottom: 48px;
   margin-bottom: 4.8rem; }
 
-/* line 47, ../sass/_02layout.scss */
+/* line 52, ../sass/_02layout.scss */
 .page .entry {
   margin: 0; }
 
-/* line 51, ../sass/_02layout.scss */
+/* line 56, ../sass/_02layout.scss */
 .entry-content {
   overflow: hidden; }
 
@@ -7305,11 +7311,11 @@ div.gform_wrapper form li {
 ---------------------------------------------------------------------------------------------------- */
 @media screen and (min-width: 1600px) {
   /* line 46, ../sass/_15media-queries.scss */
-  .container {
+  .container, .site-header .wrap {
     width: 1370px; } }
 @media screen and (min-width: 1900px) {
   /* line 52, ../sass/_15media-queries.scss */
-  .container {
+  .container, .site-header .wrap {
     width: 1600px; } }
 @media only screen and (min-width: 768px) {
   /* line 59, ../sass/_15media-queries.scss */

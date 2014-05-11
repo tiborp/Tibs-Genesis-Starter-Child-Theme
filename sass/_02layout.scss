@@ -19,7 +19,12 @@
 
 /* Containers and Columns */
 
-
+	.site-header {
+		background-color: #fff;
+		.wrap {
+			@extend .container;
+		}
+	}
 
 
 	.archive-page {
